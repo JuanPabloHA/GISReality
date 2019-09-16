@@ -7,6 +7,7 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 import networkx as nx
+from nxviz import ArcPlot, CircosPlot
 import gdal 
 
 # Defines working environment
@@ -16,32 +17,30 @@ os.chdir("/Users/juanpablo/OneDrive/UTS/iLab1/QGIS/Network/ClipData")
 # Imports pedestrian network
 PNet = nx.read_shp('Roads.shp')
 
+# Convert PNet to undirected graph
+PNet = nx.Graph(PNet)
+
 # Network properties
 type(PNet)
 
-# Convert PNet to undirected graph
-PNet2 = nx.Graph(PNet)
+len(PNet.nodes()) # number of nodes
+len(PNet.edges()) # number of edges
 
-type(PNet2)
-
-len(PNet2.nodes())
-len(PNet2.edges())
-
-edge_Leng = nx.get_edge_attributes(PNet2, "Shape_Leng")
-edge_Leng
-for n1, n2, d in PNet2.edges(data=True):
-    for att in att_list:
-        if att in d:
-            del d[att]
-
-list(PNet2.edges(data=True))[-1]
-
-### PART 1 A star
-Astar = nx.astar_path(PNet2, (9678908.590599999, 4438590.548900001), (9685398.3253, 4437041.440300001))
-Astar
-
-###
+### PART 1 A-star algorithm
+# Heuristic
+def dist(a, b):
+    (x1, y1) = a
+    (x2, y2) = b
+    return ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
 
 
+Astar = nx.astar_path(PNet, (9678908.590599999, 4438590.548900001),
+                      (9685398.3253, 4437041.440300001), weight='Shape_Leng')
+len(Astar)
 
+# Plots the results of the A* algorithm 
+APath = PNet.subgraph(Astar)
+nx.draw(APath)
+plt.show()
 
+PNet.edges(data=True)
