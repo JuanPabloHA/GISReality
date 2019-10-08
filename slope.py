@@ -1,13 +1,26 @@
 # Digital Elevation Maps - Slope 
 # Juan Pablo Herrera 
+# The present code is the raw version of the final product
 
 # Import Libraries
 import os 
+import qgis
 import zipfile
 
-# Laod vector layer
-fn = '/Users/juanpablo/OneDrive/UTS/iLab1/QGIS/Network/ClipData/StudyArea.shp'
-vlayer = iface.addVectorLayer(fn, '', 'ogr') # ogr for most shapefiles
+# Define working directory
+os.chdir('/Users/juanpablo/OneDrive/UTS/iLab1')
+
+# Loads vector layer with Study Area 
+fn = 'QGIS/Network/ClipData/StudyArea.shp'
+#vlayer = iface.addVectorLayer(fn, '', 'ogr') # ogr for most shapefiles
+QgsVectorLayer(fn, '', 'ogr')
+
+# Dissolve the study area to generete single outline
+processing.runAndLoadResults("native:dissolve", {'FIELD':[], 
+    'INPUT': fn,
+    'OUTPUT': 'memory:'})
+
+
 
 ## Unzips all the folders containing the raster layers
 dir = '/Users/juanpablo/OneDrive/UTS/iLab1/1Metre'
@@ -22,7 +35,7 @@ def un_zipFiles(path):
                 zip_file.extract(names,path)
             zip_file.close() 
 
-un_zipFiles(dir)
+#un_zipFiles(dir)
 
 # Load Raster layer
 def load_rasters(path):
@@ -32,4 +45,4 @@ def load_rasters(path):
             filePath =  path + '/' + file
             rlayer = iface.addRasterLayer(filePath, '')
 
-load_rasters(dir)
+#load_rasters(dir)
