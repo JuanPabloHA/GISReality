@@ -7,7 +7,7 @@
 
 # Libraries 
 import os 
-#import qgis 
+import qgis 
 import gdal 
 
 # Working Directory 
@@ -32,5 +32,15 @@ Rasters = loadrasters(dir)
 
 processing.runAndLoadResults('gdal:merge',
     {'INPUT': Rasters,
-    'OUTPUT':'Temp/merged.tif'})
+    'OUTPUT':'Temp/mergedDEM.tif'})
 
+# CLips the global DEM to the size of the Study area using the study area shapefile
+processing.runAndLoadResults("gdal:cliprasterbymasklayer",
+        {'INPUT': 'Temp/mergedDEM.tif',
+        'MASK': 'Temp/Dissolved.shp',
+        'NODATA': 0,
+        'CROP_TO_CUTLINE': True,
+        'KEEP_RESOLUTION': True,
+        'OPTIONS': "",
+        'DATA_TYPE': 0,
+        'OUTPUT': 'Temp/FinalDEM.tif'})
