@@ -6,6 +6,7 @@
 import os 
 import qgis
 import zipfile
+import gdal
 
 # Define working directory
 os.chdir('/Users/juanpablo/OneDrive/UTS/iLab1')
@@ -37,7 +38,7 @@ def un_zipFiles(path):
 
 #un_zipFiles(dir)
 
-# Load Raster layer
+# Load Raster layers
 def load_rasters(path):
     files=os.listdir(path)
     for file in files:
@@ -45,4 +46,4 @@ def load_rasters(path):
             filePath =  path + '/' + file
             rlayer = iface.addRasterLayer(filePath, '')
 
-#load_rasters(dir)
+

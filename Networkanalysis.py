@@ -7,15 +7,16 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 import networkx as nx
-from nxviz import ArcPlot, CircosPlot
+#from nxviz import ArcPlot, CircosPlot
 import gdal 
 
 # Defines working environment
-print(os.getcwd())
-os.chdir("/Users/juanpablo/OneDrive/UTS/iLab1/QGIS/Network/ClipData")
+os.chdir("/Users/juanpablo/OneDrive/UTS/iLab1")
+
 
 # Imports pedestrian network
-PNet = nx.read_shp('Roads.shp')
+net = 'QGIS/Network/ClipData/Roads.shp'
+PNet = nx.read_shp(net)
 
 # Convert PNet to undirected graph
 PNet = nx.Graph(PNet)
