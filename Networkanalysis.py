@@ -13,7 +13,6 @@ import gdal
 # Defines working environment
 os.chdir("/Users/juanpablo/OneDrive/UTS/iLab1")
 
-
 # Imports pedestrian network
 net = 'QGIS/Network/ClipData/Roads.shp'
 PNet = nx.read_shp(net)
