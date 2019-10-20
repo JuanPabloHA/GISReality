@@ -17,7 +17,8 @@ fn = 'QGIS/Network/ClipData/StudyArea.shp'
 QgsVectorLayer(fn, '', 'ogr')
 
 # Dissolve the study area to generete single outline
-processing.runAndLoadResults("native:dissolve", {'FIELD':[], 
+processing.runAndLoadResults("native:dissolve", 
+    {'FIELD':[], 
     'INPUT': fn,
     'OUTPUT': 'memory:'})
 

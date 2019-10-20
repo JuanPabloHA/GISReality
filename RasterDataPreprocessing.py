@@ -1,8 +1,9 @@
 # Raster Data Preprocessing
+# Author: Juan Pablo Herrera
+# MDSI - UTS Srping 2019 
 # GIS Reality
-# Author: Juan Pablo Herrera 
 
-# The code following has the intention of carry out the preprocessing for the raster layers
+# The following code has the intention of carry out the preprocessing for the raster layers
 # containing the Digital Elevation Model DEM 
 
 # Libraries 
@@ -10,8 +11,25 @@ import os
 import qgis 
 import gdal 
 
-# Working Directory 
+# Working directory 
 os.chdir('/Users/juanpablo/OneDrive/UTS/iLab1')
+
+# Un-zips all the tiles that contain the DEM for our study area, One use only.
+def un_zipFiles(path):
+    '''
+    Un-zip all the tiles that contain the DEM for our study are
+    '''
+    files=os.listdir(path)
+    for file in files:
+        if file.endswith('.zip'):
+            filePath=path+'/'+file
+            zip_file = zipfile.ZipFile(filePath)
+            for names in zip_file.namelist():
+                zip_file.extract(names,path)
+            zip_file.close() 
+
+#dir = '/Users/juanpablo/OneDrive/UTS/iLab1/1Metre'
+#un_zipFiles(dir)
 
 # Genrates list containig all the paths for the DEM
 def loadrasters(path):
@@ -30,14 +48,17 @@ def loadrasters(path):
 dir = '1Metre' # Folder cotaining un-zipped files
 Rasters = loadrasters(dir)
 
-processing.runAndLoadResults('gdal:merge',
+# Merges all the tiles that conform the DEM into a single file
+processing.run('gdal:merge',
     {'INPUT': Rasters,
     'OUTPUT':'Temp/mergedDEM.tif'})
 
 # CLips the global DEM to the size of the Study area using the study area shapefile
-processing.runAndLoadResults("gdal:cliprasterbymasklayer",
+## Requieres VectorDataPreprocessing to be completed first
+## Optional step, is mostly used for presentation purposes
+processing.run("gdal:cliprasterbymasklayer",
         {'INPUT': 'Temp/mergedDEM.tif',
-        'MASK': 'Temp/Dissolved.shp',
+        'MASK': 'Temp/Dissolved.shp',   
         'NODATA': 0,
         'CROP_TO_CUTLINE': True,
         'KEEP_RESOLUTION': True,

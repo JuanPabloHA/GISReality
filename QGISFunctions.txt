@@ -1,0 +1,213 @@
+native:addautoincrementalfield -> Add autoincremental field
+native:adduniquevalueindexfield -> Add unique value index field
+native:addxyfields -> Add X/Y fields to layer
+native:antimeridiansplit -> Geodesic line split at antimeridian
+native:arrayoffsetlines -> Array of offset (parallel) lines
+native:arraytranslatedfeatures -> Array of translated features
+native:assignprojection -> Assign projection
+native:boundary -> Boundary
+native:boundingboxes -> Bounding boxes
+native:buffer -> Buffer
+native:bufferbym -> Variable width buffer (by M value)
+native:calculatevectoroverlaps -> Overlap analysis
+native:categorizeusingstyle -> Create categorized renderer from styles
+native:centroids -> Centroids
+native:clip -> Clip
+native:collect -> Collect geometries
+native:convexhull -> Convex hull
+native:dbscanclustering -> DBSCAN clustering
+native:deleteholes -> Delete holes
+native:densifygeometriesgivenaninterval -> Densify by interval
+native:difference -> Difference
+native:dissolve -> Dissolve
+native:dropgeometries -> Drop geometries
+native:dropmzvalues -> Drop M/Z values
+native:explodehstorefield -> Explode HStore Field
+native:explodelines -> Explode lines
+native:extendlines -> Extend lines
+native:extenttolayer -> Create layer from extent
+native:extractbinary -> Extract binary field
+native:extractbyattribute -> Extract by attribute
+native:extractbyexpression -> Extract by expression
+native:extractbyextent -> Extract/clip by extent
+native:extractbylocation -> Extract by location
+native:extractmvalues -> Extract M values
+native:extractvertices -> Extract vertices
+native:extractzvalues -> Extract Z values
+native:filedownloader -> Download file
+native:filter -> Feature filter
+native:filterverticesbym -> Filter vertices by M value
+native:filterverticesbyz -> Filter vertices by Z value
+native:fixgeometries -> Fix geometries
+native:forcerhr -> Force right-hand-rule
+native:hublines -> Join by lines (hub lines)
+native:importphotos -> Import geotagged photos
+native:interpolatepoint -> Interpolate point on line
+native:intersection -> Intersection
+native:joinattributestable -> Join attributes by field value
+native:joinbynearest -> Join attributes by nearest
+native:kmeansclustering -> K-means clustering
+native:lineintersections -> Line intersections
+native:linesubstring -> Line substring
+native:loadlayer -> Load layer into project
+native:meancoordinates -> Mean coordinate(s)
+native:mergelines -> Merge lines
+native:mergevectorlayers -> Merge vector layers
+native:minimumenclosingcircle -> Minimum enclosing circles
+native:multiparttosingleparts -> Multipart to singleparts
+native:multiringconstantbuffer -> Multi-ring buffer (constant distance)
+native:offsetline -> Offset lines
+native:orderbyexpression -> Order by expression
+native:orientedminimumboundingbox -> Oriented minimum bounding box
+native:package -> Package layers
+native:pixelstopoints -> Raster pixels to points
+native:pixelstopolygons -> Raster pixels to polygons
+native:pointonsurface -> Point on surface
+native:pointsalonglines -> Points along geometry
+native:polygonstolines -> Polygons to lines
+native:printlayoutmapextenttolayer -> Print layout map extent to layer
+native:projectpointcartesian -> Project points (Cartesian)
+native:promotetomulti -> Promote to multipart
+native:rasterbooleanand -> Raster boolean AND
+native:rasterlayeruniquevaluesreport -> Raster layer unique values report
+native:rasterlayerzonalstats -> Raster layer zonal statistics
+native:rasterlogicalor -> Raster boolean OR
+native:rastersurfacevolume -> Raster surface volume
+native:reclassifybylayer -> Reclassify by layer
+native:reclassifybytable -> Reclassify by table
+native:removeduplicatesbyattribute -> Delete duplicates by attribute
+native:removeduplicatevertices -> Remove duplicate vertices
+native:removenullgeometries -> Remove null geometries
+native:renamelayer -> Rename layer
+native:reprojectlayer -> Reproject layer
+native:reverselinedirection -> Reverse line direction
+native:rotatefeatures -> Rotate
+native:saveselectedfeatures -> Extract selected features
+native:segmentizebymaxangle -> Segmentize by maximum angle
+native:segmentizebymaxdistance -> Segmentize by maximum distance
+native:selectbylocation -> Select by location
+native:setmfromraster -> Set M value from raster
+native:setzfromraster -> Drape (set Z value from raster)
+native:shortestpathlayertopoint -> Shortest path (layer to point)
+native:shortestpathpointtolayer -> Shortest path (point to layer)
+native:shortestpathpointtopoint -> Shortest path (point to point)
+native:simplifygeometries -> Simplify
+native:smoothgeometry -> Smooth
+native:snappointstogrid -> Snap points to grid
+native:splitlinesbylength -> Split lines by maximum length
+native:splitwithlines -> Split with lines
+native:stringconcatenation -> String concatenation
+native:subdivide -> Subdivide
+native:swapxy -> Swap X and Y coordinates
+native:symmetricaldifference -> Symmetrical difference
+native:taperedbuffer -> Tapered buffers
+native:transect -> Transect
+native:translategeometry -> Translate
+native:union -> Union
+native:wedgebuffers -> Create wedge buffers
+native:zonalhistogram -> Zonal histogram
+qgis:addfieldtoattributestable -> Add field to attributes table
+qgis:advancedpythonfieldcalculator -> Advanced Python field calculator
+qgis:aggregate -> Aggregate
+qgis:aspect -> Aspect
+qgis:barplot -> Bar plot
+qgis:basicstatisticsforfields -> Basic statistics for fields
+qgis:boxplot -> Box plot
+qgis:buildvirtualvector -> Build virtual vector
+qgis:checkvalidity -> Check validity
+qgis:concavehull -> Concave hull (alpha shapes)
+qgis:convertgeometrytype -> Convert geometry type
+qgis:countpointsinpolygon -> Count points in polygon
+qgis:createattributeindex -> Create attribute index
+qgis:createconstantrasterlayer -> Create constant raster layer
+qgis:creategrid -> Create grid
+qgis:createpointslayerfromtable -> Create points layer from table
+qgis:createspatialindex -> Create spatial index
+qgis:definecurrentprojection -> Define layer projection
+qgis:delaunaytriangulation -> Delaunay triangulation
+qgis:deletecolumn -> Drop field(s)
+qgis:deleteduplicategeometries -> Delete duplicate geometries
+qgis:densifygeometries -> Densify by count
+qgis:distancematrix -> Distance matrix
+qgis:distancetonearesthublinetohub -> Distance to nearest hub (line to hub)
+qgis:distancetonearesthubpoints -> Distance to nearest hub (points)
+qgis:eliminateselectedpolygons -> Eliminate selected polygons
+qgis:executesql -> Execute SQL
+qgis:exportaddgeometrycolumns -> Add geometry attributes
+qgis:extractspecificvertices -> Extract specific vertices
+qgis:fieldcalculator -> Field calculator
+qgis:findprojection -> Find projection
+qgis:generatepointspixelcentroidsalongline -> Generate points (pixel centroids) along line
+qgis:generatepointspixelcentroidsinsidepolygons -> Generate points (pixel centroids) inside polygons
+qgis:geometrybyexpression -> Geometry by expression
+qgis:heatmapkerneldensityestimation -> Heatmap (Kernel Density Estimation)
+qgis:hillshade -> Hillshade
+qgis:hypsometriccurves -> Hypsometric curves
+qgis:idwinterpolation -> IDW interpolation
+qgis:importintopostgis -> Export to PostgreSQL
+qgis:importintospatialite -> Export to SpatiaLite
+qgis:joinattributesbylocation -> Join attributes by location
+qgis:joinbylocationsummary -> Join attributes by location (summary)
+qgis:keepnbiggestparts -> Keep N biggest parts
+qgis:knearestconcavehull -> Concave hull (k-nearest neighbor)
+qgis:linestopolygons -> Lines to polygons
+qgis:listuniquevalues -> List unique values
+qgis:meanandstandarddeviationplot -> Mean and standard deviation plot
+qgis:minimumboundinggeometry -> Minimum bounding geometry
+qgis:nearestneighbouranalysis -> Nearest neighbour analysis
+qgis:orthogonalize -> Orthogonalize
+qgis:pointsdisplacement -> Points displacement
+qgis:pointstopath -> Points to path
+qgis:polarplot -> Polar plot
+qgis:poleofinaccessibility -> Pole of inaccessibility
+qgis:polygonfromlayerextent -> Extract layer extent
+qgis:polygonize -> Polygonize
+qgis:postgisexecuteandloadsql -> PostgreSQL execute and load SQL
+qgis:postgisexecutesql -> PostgreSQL execute SQL
+qgis:randomextract -> Random extract
+qgis:randomextractwithinsubsets -> Random extract within subsets
+qgis:randompointsalongline -> Random points along line
+qgis:randompointsinextent -> Random points in extent
+qgis:randompointsinlayerbounds -> Random points in layer bounds
+qgis:randompointsinsidepolygons -> Random points inside polygons
+qgis:randomselection -> Random selection
+qgis:randomselectionwithinsubsets -> Random selection within subsets
+qgis:rastercalculator -> Raster calculator
+qgis:rasterize -> Convert map to raster
+qgis:rasterlayerhistogram -> Raster layer histogram
+qgis:rasterlayerstatistics -> Raster layer statistics
+qgis:rastersampling -> Sample raster values
+qgis:rectanglesovalsdiamondsfixed -> Rectangles, ovals, diamonds (fixed)
+qgis:rectanglesovalsdiamondsvariable -> Rectangles, ovals, diamonds (variable)
+qgis:refactorfields -> Refactor fields
+qgis:regularpoints -> Regular points
+qgis:relief -> Relief
+qgis:ruggednessindex -> Ruggedness index
+qgis:scatter3dplot -> Vector layer scatterplot 3D
+qgis:selectbyattribute -> Select by attribute
+qgis:selectbyexpression -> Select by expression
+qgis:serviceareafromlayer -> Service area (from layer)
+qgis:serviceareafrompoint -> Service area (from point)
+qgis:setmvalue -> Set M value
+qgis:setstyleforrasterlayer -> Set style for raster layer
+qgis:setstyleforvectorlayer -> Set style for vector layer
+qgis:setzvalue -> Set Z value
+qgis:singlesidedbuffer -> Single sided buffer
+qgis:slope -> Slope
+qgis:snapgeometries -> Snap geometries to layer
+qgis:spatialiteexecutesql -> SpatiaLite execute SQL
+qgis:splitvectorlayer -> Split vector layer
+qgis:statisticsbycategories -> Statistics by categories
+qgis:sumlinelengths -> Sum line lengths
+qgis:texttofloat -> Text to float
+qgis:tilesxyzdirectory -> Generate XYZ tiles (Directory)
+qgis:tilesxyzmbtiles -> Generate XYZ tiles (MBTiles)
+qgis:tininterpolation -> TIN interpolation
+qgis:topologicalcoloring -> Topological coloring
+qgis:truncatetable -> Truncate table
+qgis:variabledistancebuffer -> Variable distance buffer
+qgis:vectorlayerhistogram -> Vector layer histogram
+qgis:vectorlayerscatterplot -> Vector layer scatterplot
+qgis:voronoipolygons -> Voronoi polygons
+qgis:zonalstatistics -> Zonal statistics
+saga:accumulatedcost -> Accumulated cost
